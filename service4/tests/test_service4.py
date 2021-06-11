@@ -10,5 +10,5 @@ class TestQuery(TestBase):
     def test_service4(self):
         response = self.client.post(url_for('returnresult'), data='a pack of firebreathing lizards,on the outskirts of a city')
         self.assert200(response)
-        expected = "Oh no, you've run in to a pack of firebreathing lizards in on the outskirts of a city! What's going to happen? Aaaaaah! you manage to escape the lizards, though a little singed"
+        expected = "This encounter has been censored because of excessive silliness"
         self.assertEqual(response.data.decode('utf-8'), expected)
