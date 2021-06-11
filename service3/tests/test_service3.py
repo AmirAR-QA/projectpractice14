@@ -8,7 +8,7 @@ class TestHome(TestCase):
 
 class TestQuery(TestHome):
     def test_service3(self):
-        
+
         response = self.client.get(url_for("location"))
 
         alllocations = ["in a forested valley","on top of a mountain","in a cave","on the outskirts of a city","while walking into a swamp"]
