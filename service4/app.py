@@ -11,9 +11,6 @@ app.config['SECRET_KEY'] = "secret"
 
 db = SQLAlchemy(app)
 
-from application import routes
-
-
 @app.route('/result', methods = ['GET', 'POST'])
 def returnresult():
     encounter_result = "This encounter has been censored because of excessive silliness"
