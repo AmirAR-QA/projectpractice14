@@ -1,7 +1,7 @@
 version: '3.8'
 services:
     service1:
-        image: aabdur-rahman/service1
+        image: aabdurrahman/service1
         build: ./service1
         container_name: service1
         ports:
@@ -16,7 +16,7 @@ services:
             DATABASE_URI: ${DATABASE_URI}
             SECRET_KEY: ${SECRET_KEY}
     service2:
-        image: aabdur-rahman/service2
+        image: aabdurrahman/service2
         build: ./service2
         container_name: service2
         ports:
@@ -24,7 +24,7 @@ services:
               published: 5001
               protocol: tcp
     service3:
-        image: aabdur-rahman/service3
+        image: aabdurrahman/service3
         build: ./service3
         container_name: service3
         ports:
@@ -32,7 +32,7 @@ services:
               published: 5002
               protocol: tcp
     service4:
-        image: aabdur-rahman/service4
+        image: aabdurrahman/service4
         build: ./service4
         container_name: service4
         ports:

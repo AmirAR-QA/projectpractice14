@@ -21,4 +21,7 @@ pip3 install --user ansible
 ansible --version
 
 # # Docker login
-docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+docker login --username $DOCKER_USERNAME --password $DOCKER_USERNAME
+
+echo Username: $DOCKER_USERNAME
+echo Pass: $DOCKER_USERNAME
