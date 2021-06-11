@@ -1,0 +1,23 @@
+<html>
+    <title>A (not so) random adventure!</title>
+    <body>
+        <h1>A (not so) random adventure!</h1>
+        <div class = 'form'>
+            <form method='POST' action="">
+                {{ form.hidden_tag() }}
+                {{ form.adventuring }}
+            </form>
+        </div>
+        <h2>Your adventure:</h2>
+        <p>
+        Oh no, you've run in to {{ encounter }} in {{ location }}! What's going to happen? Aaaaaah! {{ result }}
+        </p>
+        <h3>Previous adventures:</h3>
+        <p>
+            {% for encounters in all_adventures %}
+            On a previous episode of random adventures, you met {{ encounters.encounter }} {{ encounters.location }}
+            <br>
+            {% endfor %}
+        </p>
+    </body>
+</html>
