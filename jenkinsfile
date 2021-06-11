@@ -1,11 +1,12 @@
 pipeline {
     agent any
-    // environment {
-    //     DOCKER_USERNAME = credentials('DOCKER_USERNAME')
-    //     DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
-    //     install = 'false'
-    //     DATABASE_URI = credentials('DATABASE_URI')
-    // }
+    environment {
+        DOCKER_USERNAME = credentials('DOCKER_USERNAME')
+        DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
+        install = 'true'
+        DATABASE_URI = credentials('DATABASE_URI')
+        SECRET_KEY = credentials('SECRET_KEY')
+    }
     stages {
         stage('Install Requirements') {
             steps {
@@ -23,7 +24,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker-compose build'
+                sh 'docker-compose build --parallel'
             }
         }
         stage('Push') {
