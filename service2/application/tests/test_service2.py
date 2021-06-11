@@ -1,6 +1,7 @@
 from flask_testing import TestCase
 from flask import url_for
-from application import app, encounter
+from application import app, routes
+from routes import encounter 
 
 class TestHome(TestCase):
     def create_app(self):
