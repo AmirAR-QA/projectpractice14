@@ -39,9 +39,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // sh 'bash jenkins/deploy.sh'
-                sh 'echo push'
-
+                sh 'bash jenkins/deploy.sh'
             }
         }
     }
